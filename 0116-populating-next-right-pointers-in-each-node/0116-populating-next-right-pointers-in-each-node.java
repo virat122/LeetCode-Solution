@@ -23,14 +23,12 @@ class Node {
 
 class Solution {
     public Node connect(Node root) {
-            
-        List<List<Integer>> ans=new ArrayList<>();
+     
 
         Queue<Node> q=new  LinkedList<>();
 
         if(root==null)return root;
-
-        List<Integer> sub=new ArrayList<>();
+   List<Integer> sub=new ArrayList<>();
         
         
         q.add(root);
@@ -39,16 +37,15 @@ class Solution {
         while(!q.isEmpty()){
            Node cur=q.remove();
             if(cur==null){
-                ans.add(sub);
+             
                 if(q.isEmpty()){
                     break;
-                }else{
-                    sub=new ArrayList<>();
+                }else{                   
                     q.add(null);
                 }
             }else{
                     cur.next=q.element();
-                sub.add(cur.val);
+               
                 if(cur.left!=null){
                     q.add(cur.left);
                 }
