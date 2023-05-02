@@ -1,7 +1,7 @@
 class Solution {
-    public List<List<String>> groupAnagrams(String[]s) {
+    public List<List<String>> groupAnagrams(String[] s) {
             
-            List<List<String>>  ans=new ArrayList<>();
+             List<List<String>>  ans=new ArrayList<>();
             
             Map<String ,List<String>> map=new HashMap<>();
             for(int i=0;i<s.length;i++){
