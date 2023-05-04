@@ -17,7 +17,7 @@ class RecentCounter {
             }else{
                     int dif=t-3000;
                     while( !q.isEmpty() && q.peek()<dif ){
-                            q.remove();
+                            q.poll();
                     }
                     q.add(t);
             }
