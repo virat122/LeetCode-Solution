@@ -1,5 +1,5 @@
 class OrderedStream {
- int idx=0;   
+  int idx=0;   
     String s[];
     public OrderedStream(int n) {
         s=new String[n];
