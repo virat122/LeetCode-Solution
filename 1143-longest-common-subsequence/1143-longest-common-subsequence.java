@@ -1,15 +1,43 @@
 class Solution {
     public int longestCommonSubsequence(String t1, String t2) {
             
-            int strg[][] =new int [t1.length()][t2.length()];
-            for(int i=0;i<t1.length();i++)
-            Arrays.fill(strg[i],-1);
-            int ans=lcs(t1,t2,0,0,strg);
             
-           
-            return ans;
+            int strg[][] =new int [t1.length()+1][t2.length()+1];
             
-        
+            for(int i=t1.length()-1;i>=0;i--){
+                    for(int j=t2.length()-1;j>=0;j--){
+                            
+                            if(t1.charAt(i)==t2.charAt(j)){
+                                    strg[i][j]= strg[i+1][j+1]+1;
+                            }else{
+                                    int a=strg[i+1][j];
+                                       int b=strg[i][j+1];
+                                    strg[i][j]=Math.max(a,b);
+                                    
+                            }
+                            
+                    
+                    }
+                    
+            }
+            return strg[0][0];
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+//             for(int i=0;i<t1.length();i++)
+//                 Arrays.fill(strg[i],-1); 
+            
+//             int ans=lcs(t1,t2,0,0,strg);
+//             return ans;
     }
          public int lcs(String t1, String t2,int vidx1,int vidx2,int strg[][]) {
             if(t1.length()==vidx1|| t2.length()==vidx2){
