@@ -28,8 +28,8 @@ class Solution {
                     
             }else{
                    int  i=soln(w1,w2,idx1+1,idx2,arr);
-                  int  d=soln(w1,w2,idx1,idx2+1,arr);
-                  int   r=soln(w1,w2,idx1+1,idx2+1 ,arr);
+                   int  d=soln(w1,w2,idx1,idx2+1,arr);
+                   int   r=soln(w1,w2,idx1+1,idx2+1 ,arr);
                     ans=Math.min(i,Math.min(d,r))+1;
                     
             }
