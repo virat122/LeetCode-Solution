@@ -4,7 +4,7 @@ class Solution {
         arr[1]=1;
         arr[2]=2;
         arr[3]=5;
-        if(n<4)return (int )arr[n];
+     
         
         return (int)nTilings(n,arr);
         
